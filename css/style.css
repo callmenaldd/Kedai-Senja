@@ -85,6 +85,38 @@ body{
 #hamburger-menu {
     display: none;
 }
+/* Navbar search form */
+.navbar .search-form{
+    position: absolute;
+    top: 90%;
+    right: 7%;
+    background-color: #ffffff;
+    width: 50rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.navbar .search-form.active {
+    transform: scaleY(1);
+}
+.navbar .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.8rem;
+    color: var(--bg);
+    padding: 1rem;
+
+}
+.navbar .search-form label{
+    cursor:pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg)
+}
 
 /* Hero section */
 .hero{
@@ -146,12 +178,14 @@ body{
 /*About section*/
 .about,
 .menu,
+.products,
 .contact {
     padding: 8rem 7% 1.4rem;
     
 }
 .about h2,
 .menu h2,
+.products h2,
 .contact h2{
     text-align: center;
     font-size: 2.6rem;
@@ -160,6 +194,7 @@ body{
 }
 .about h2 span,
 .menu h2 span,
+.products h2 span,
 .contact h2 span {
     color: #d67412;
 
@@ -216,6 +251,34 @@ body{
 }
 .menu .row .menu-card-title{
     margin: 1rem auto 0.5rem;
+}
+/* Produk Section */
+.products .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+.products .product-card{
+    text-align: center;
+    border: 1px solid #6666;
+    padding: 2rem;
+}
+.products .product-icons{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.products .product-icons a{
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    margin: 0.3rem;
+    border: 1px solid #6666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Contact Section */
 .contact .row{
@@ -339,6 +402,10 @@ footer .credit a{
    }
    .navbar.navbar-nav:hover::after{
     transform: scaleX(0.2);
+   }
+   .navbar .search-form{
+    width: 90%;
+    right: 2rem;
    }
    .about .row{
     flex-wrap: wrap;
